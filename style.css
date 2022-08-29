@@ -1,0 +1,200 @@
+body{
+    background-color: #E9897E;
+}
+button{
+    border: none;
+    margin-right: 20px;
+    color: white;
+}
+input{
+    height: 20%;
+}
+.start_btn{
+font-size: 25px;
+font-weight: 500;
+color: #FF6F61;
+padding: 15px 30px;
+outline: none;
+border: none;
+border-radius: 5px;
+background: #fff;
+cursor: pointer;
+}
+.start_btn,
+.info_box,
+.result_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.result_box{
+    height: auto !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.result_box.activeResult{
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+ 
+}
+.info_box.activeInfo,
+.quiz_box.activeQuiz{
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.info_box{
+width: 540px;
+background: #e65c4d;
+border-radius: 5px;
+transform: translate(-50%, -50%) scale(0.9);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s ease;
+}
+.info_box .info-title span i{
+    color: white;
+}
+.info_box .info-title{
+height: 80px;
+width: 100%;
+display: flex;
+align-items: center;
+padding: 0 30px;
+border-radius: 5px 5px 0 0;
+font-size: 20px;
+font-weight: 600;
+}
+
+.info_box .info-list{
+padding: 15px 30px;
+}
+
+.info_box .info-list .info{
+margin: 5px 0;
+font-size: 17px;
+color: white;
+}
+
+.info_box .info-list .info span{
+font-weight: 600;
+color: #FF6F61;
+}
+.info_box .buttons{
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 0 30px;
+}
+
+.info_box .buttons button{
+margin: 0 5px;
+height: 40px;
+width: 100px;
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+border: none;
+outline: none;
+border-radius: 5px;
+border: 1px solid #FF6F61;
+transition: all 0.3s ease;
+color: #FF6F61;
+}
+.info_box .buttons button:hover{
+background-color: #FF6F61;
+color: #fff;
+}
+.result_box{
+width: 540px;
+background: rgb(229, 115, 102);
+border-radius: 5px;
+transform: translate(-50%, -50%) scale(0.9);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s ease; 
+padding: 35px 30px;
+}
+.result_box .header button{
+float: left;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+border-radius: 5px;
+}
+/* Remove margins and padding from the list */
+ul {
+margin: 0;
+padding: 0;
+}
+
+/* Style the list items */
+ul li {
+cursor: pointer;
+position: relative;
+padding: 12px 8px 12px 40px;
+list-style-type: none;
+background: #e65c4d;
+font-size: 18px;
+transition: 0.2s;
+border-radius: 5px;
+margin-top: 5px;
+color: #fff;
+/* make the list items unselectable */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+
+
+/* Darker background-color on hover */
+ul li:hover {
+background:#f2ada6;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+background: #e65c4d;
+color: #fff;
+text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+content: '';
+position: absolute;
+border-color: #fff;
+border-style: solid;
+border-width: 0 2px 2px 0;
+top: 10px;
+left: 16px;
+transform: rotate(45deg);
+height: 15px;
+width: 7px;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+background-color: #f44336;
+color: white;
+}
